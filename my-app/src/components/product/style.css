@@ -1,0 +1,81 @@
+.product-detail {
+    padding: 30px 0 0 30px;
+    background-color: white;
+}
+
+
+.b {
+    display: contents;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 16px; */
+}
+
+.c {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.btn-add {
+    background-color: #00FF19;
+    color: white;
+    width: 320px;
+    height: 103px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 16px;
+    border-radius: 10px;
+}
+
+.btn-buy {
+    width: 280px;
+    height: 103px;
+    background-color: #00C2FF;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 16px;
+    color: white;
+}
+
+.capture {
+    margin-left: 50%;
+    margin-top: 36px;
+    width: 198px;
+    height: 107px;
+    left: 138px;
+    top: 560px;
+}
+
+.aa {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.bb {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 16px;
+    align-items: center;
+}
+
+.star1 {
+    color: yellow;
+    font-size: 50px;
+    align-items: center;
+}
+
+.sao {
+    padding: 10px 0 20px 0 ;
+}

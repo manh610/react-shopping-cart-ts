@@ -1,0 +1,62 @@
+.cart {
+    background-color: white;
+}
+
+.header {
+    margin-left: 20px;
+}
+
+.content {
+    margin-top: 0;
+    margin-left: 80px;
+}
+
+.b {
+    /* display: contents;    */
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 24px;
+}
+
+.c {
+    font-size: 36px;
+}
+
+.image {
+    width: 150px;
+    height: 190px;
+}
+
+.amount {
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50%;
+    font-size: 24px;
+}
+
+.total {
+    text-align: right;
+    margin-right: 29px;
+    font-size: 24px;
+}
+
+.sl {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    margin-left: 85%;
+}
+.item {
+    margin-right: 29px;
+}
+.cancel {
+    display: inline-block;
+    align-items: center;
+}
+
+.hr {
+    width: 98%;
+}

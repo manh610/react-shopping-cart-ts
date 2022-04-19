@@ -1,0 +1,86 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "manh610",
+      "password": "123456",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "manh0610",
+      "password": "888888",
+      "role": "USER"
+    },
+    {
+      "id": 3,
+      "username": "dangmanh610",
+      "password": "111111",
+      "role": "USER"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Oppo A31",
+      "price": 6940000,
+      "star": 5,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    },
+    {
+      "id": 2,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Iphone A31",
+      "price": 6940000,
+      "star": 5,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    },
+    {
+      "id": 3,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Samsung Galaxy A31",
+      "price": 6940000,
+      "star": 4,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    },
+    {
+      "id": 4,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Samsung Galaxy A31",
+      "price": 6000000,
+      "star": 5,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    },
+    {
+      "id": 5,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Samsung Galaxy A31",
+      "price": 7000000,
+      "star": 5,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    },
+    {
+      "id": 6,
+      "capture": "/image/capture.png",
+      "image": "/image/samsung.png",
+      "title": "Samsung Galaxy A31",
+      "price": 6540000,
+      "star": 1,
+      "des": "Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh."
+    }
+  ],
+  "cart": [
+    {
+      "id": 5,
+      "userId": 1,
+      "itemId": 2,
+      "amount": 5
+    }
+  ]
+}

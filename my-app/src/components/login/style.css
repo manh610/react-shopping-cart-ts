@@ -1,0 +1,26 @@
+body{
+    background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+    position: absolute;
+}
+
+.logo {
+    position: absolute;
+    width: 73px;
+    height: 72px;
+    left: 745px;
+    top: 97px;
+    border-radius: 50%;
+}
+
+.form {
+    position: absolute;
+    left: 35.08%;
+    right: 34.78%;
+    top: 30%;
+    bottom: 69.24%;
+    padding-top: 100px;
+}
+
+.btn {
+    border : 2px white
+}

@@ -1,0 +1,51 @@
+.shop {
+    padding: 30px 0 0 30px;
+    background-color: white;
+}
+
+.filter {
+    width: 40;
+    height: 32;
+}
+
+.header {
+    height: auto;
+}
+
+.product-info {
+    margin-bottom: 30px;
+}
+.a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.b {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 16px;
+    align-items: center;
+}
+
+.star {
+    color: yellow;
+    font-size: 30px;
+}
+
+.c1 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    /* align-items: center; */
+}

@@ -1,0 +1,56 @@
+.profile {
+    background-color: white;
+    height: 610px;
+    padding-left: 20px;
+}
+
+.avatar {
+    
+    width: 186px;
+    height: 190px;
+    left: 107px;
+    top: 73px;
+}
+
+.content {
+    margin-left: 88px;
+}
+
+
+.title {
+    margin-bottom: 50px;
+}
+
+.header {
+    width: 405px;
+    height: 60px;
+    left: 21px;
+    top: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 16px;
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    display: contents;
+}
+
+.email {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    display: contents;
+}
