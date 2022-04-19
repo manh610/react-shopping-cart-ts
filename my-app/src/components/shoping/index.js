@@ -7,16 +7,21 @@ import { Input } from 'antd';
 import {StarFilled} from '@ant-design/icons';
 import Header from '../../Header';
 import Toolbar from '../../Toolbar';
-import api from '../../api/data';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
 
     const getIems = async () => {
-        const response = await api.get("/items");
-        return response.data;
+        let response; 
+        await axios.get(`http://localhost:3006/items/`)
+            .then( res => {
+                response = res.data;
+            })
+            .catch(err => console.log(err));
+        return response;
     }
 
     const navigate = useNavigate();

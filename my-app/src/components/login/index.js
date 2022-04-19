@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.css';
 import { Image, Form, Input, Button, Checkbox } from 'antd';
 import './style.css'
-import api from '../../api/data';
 import { useDispatch, useSelector } from 'react-redux';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { selectUserId, updateUserId } from  '../../redux/reducer';
 import { useNavigate } from "react-router-dom";
-// import store from '../../redux/store';
+import axios from 'axios';
+
 
 const Login = () => {
 
@@ -24,16 +24,21 @@ const Login = () => {
     const userId = useSelector(selectUserId);
     
     const checkLogin = async () => {
-        const response = await api.get("/user?username="+username+"&password="+password);
-        if (response.data.length !== 0 ) {
+        let response;
+        await axios.get(`http://localhost:3006/user?username=${username}&password=${password}`)
+            .then( res => {
+                response = res.data;
+            })
+            .catch(error => console.log(error));
+        if (response.length !== 0 ) {
             notify('success');
-            const user = response.data[0].id;
+            const user = response.id;
             dispatch(updateUserId(user));
             navigate("/shop");
         } else {
             notify("fail");
         }
-        return response.data;
+        return response;
     }
 
     useEffect ( () => {

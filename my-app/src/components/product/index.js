@@ -7,10 +7,10 @@ import Toolbar from '../../Toolbar';
 import { StarFilled} from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import api from '../../api/data';
 import { useParams } from 'react-router-dom';
 import { addToCart, updateCart } from '../../redux/reducer';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 const ProductDetail = (props) => {
@@ -26,8 +26,13 @@ const ProductDetail = (props) => {
     const cart = useSelector(state => state.root.cart);
 
     const getItem = async () => {
-        const response = await api.get("/items/"+productId);
-        return response.data;
+        let response;
+        await axios.get(`http://localhost:3006/items/${productId}`)
+            .then(res=>{
+                response = res.data;
+            })
+            .catch(error => console.log(error));
+        return response;
     }
 
     useEffect( () => {
