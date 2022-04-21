@@ -25,16 +25,17 @@ const Profile = () => {
 
   const userId = useSelector(state => state.root.userId);
 
+  console.log(userId)
+
   const getInfoUser = async () => {
     let response;
     await axios.get(`http://localhost:3006/user?id=${userId}`)
       .then( res => {
         response = res.data;
-        console.log(response[0]);
-        setUser(response[0]);
-        console.log(user)
+        
       })
       .catch(error => console.log(error));
+      setUser(response[0]);
   }
 
   useEffect( () => {
@@ -63,10 +64,10 @@ const Profile = () => {
                         </Col>
                         <Col span={17}>
                           <Row>
-                            <p className='name'>MR USER</p>
+                            <p className='name'>MR {(user.username)}</p>
                           </Row>
                           <Row>
-                            <p className='email'>Email: user@gmail.com</p>
+                            <p className='email'>Email: {user.username}@gmail.com</p>
                           </Row>
                         </Col>
                       </Row>

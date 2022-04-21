@@ -33,7 +33,7 @@ const Shop = () => {
         let productsAfterFilter = {};
         if (allProducts) {
             productsAfterFilter = allProducts.filter( (product) => {
-                return product.title.includes(filter);
+                return (product.title).toLowerCase().includes(filter.toLowerCase());
             })
             setProducts(productsAfterFilter);
         }
@@ -41,7 +41,8 @@ const Shop = () => {
 
     useEffect( () => {
         search()
-    }, [])
+        console.log(products);
+    }, [filter])
 
     const getAllItems = async () => {
         const allProducts = await getIems();
@@ -52,6 +53,7 @@ const Shop = () => {
 
     useEffect( () => {
         getAllItems();
+        console.log(products);
     }, []);
 
     const printStar = (product) => {

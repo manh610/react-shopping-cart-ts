@@ -28,11 +28,12 @@ const Login = () => {
         await axios.get(`http://localhost:3006/user?username=${username}&password=${password}`)
             .then( res => {
                 response = res.data;
+                console.log(response);
             })
             .catch(error => console.log(error));
         if (response.length !== 0 ) {
             notify('success');
-            const user = response.id;
+            const user = response[0].id;
             dispatch(updateUserId(user));
             navigate("/shop");
         } else {
