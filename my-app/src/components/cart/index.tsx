@@ -126,7 +126,7 @@ const Cart = () => {
                                     <p className='header'>Cart</p>
                                 </Row>
                                 <Row>
-                                    <p className='sl'>{items.length} items in bag</p>
+                                    <p className='sl'>{items.length} {items.length>1?"items":"item"} in bag</p>
                                 </Row>
                             </div>
                             <div className="content">
