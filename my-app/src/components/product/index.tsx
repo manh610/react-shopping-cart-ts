@@ -124,7 +124,7 @@ const ProductDetail = () => {
                                     </Col>
                                     <Col span={13}>
                                         <Row>
-                                            <p className='b'>Điện thoại {item.title}</p>
+                                            <p className='bb'>Điện thoại {item.title}</p>
                                         </Row>
                                         <Row>
                                             <p className='b'>{item.des}</p>
