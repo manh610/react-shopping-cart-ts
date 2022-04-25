@@ -90,13 +90,14 @@ const Shop = () => {
                                     <p className='a' >Shop</p>
                                 </Row>
                                 <Row>
+                                    <Col span={1}></Col>
                                     <Col span={14}>
                                         <p className='b'>Shop</p>
                                     </Col>
                                     <Col span={8}>
                                         <Input.Search width={469} allowClear placeholder="Search..." onChange={(e) => setFilter(e.target.value)} />
                                     </Col>
-                                    <Col span={2}>
+                                    <Col span={1}>
                                         <Image width={40} height={32} src='image/filter.png' />
                                     </Col>
                                 </Row>

@@ -7,7 +7,7 @@ import './Header.css'
 export default class Header extends Component {
   render() {
     return (
-      <Row className='style' >
+      <Row className="style" >
         <Col className='a' span={3}>
           <Image width={98} height={86} preview={false} src='/image/Logo 1.png' />
         </Col>

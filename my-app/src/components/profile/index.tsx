@@ -85,10 +85,10 @@ const Profile = () => {
                   </Col>
                   <Col span={17}>
                     <Row>
-                      <p className='name'>MR {(user.username)}</p>
+                      <p className='name'>MR {(user!==undefined)?(user.username):""}</p>
                     </Row>
                     <Row>
-                      <p className='email'>Email: {user.username}@gmail.com</p>
+                      <p className='email'>Email: {(user!==undefined)?(user.username):""}@gmail.com</p>
                     </Row>
                   </Col>
                 </Row>
