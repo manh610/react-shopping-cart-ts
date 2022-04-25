@@ -13,8 +13,8 @@ const Toolbar = () => {
 
   const navigate = useNavigate();
 
-  const onOpenChange = keys => {
-    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
+  const onOpenChange = (keys : any) => {
+    const latestOpenKey = keys.find((key:any) => openKeys.indexOf(key) === -1);
     if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       setOpenKeys(keys);
     } else {

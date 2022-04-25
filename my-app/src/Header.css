@@ -13,3 +13,39 @@
     align-items: center;
     color: #000000;
 }
+
+.style {
+    height: 119px;
+    top: 0 px;
+    background: #C6E5F4;
+    left: 0 px;
+    display: flex
+}
+
+.a {
+    width: 98px;
+    height: 86px;
+    margin-left: 37px;
+    padding-top: 10px;
+    padding-bottom: 23px
+}
+
+.ava {
+    width: 69px;
+    height: 69px;
+    padding-top: 27px;
+    float: 'right'
+}
+
+/* .b {
+    position: absolute;
+    width: 505px;
+    height: 66px;
+    top: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    align-items: center
+} */
