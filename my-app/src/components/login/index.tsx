@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const Login = () => {
 
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const dispatch = useDispatch();
@@ -24,22 +24,27 @@ const Login = () => {
     const userId = useSelector(selectUserId);
 
     const checkLogin = async () => {
-        let response: any;
-        await axios.get(`http://localhost:3006/user?username=${username}&password=${password}`)
-            .then(res => {
-                response = res.data;
-                console.log(response);
-            })
-            .catch(error => console.log(error));
-        if (response.length !== 0) {
-            notify('success');
-            const user = response[0].id;
-            dispatch(updateUserId(user));
-            navigate("/shop");
-        } else {
-            notify("fail");
+        const data = {
+            email : email,
+            password : password,
+            remember : true,
+            additionalProp1 : {}
         }
-        return response;
+
+        axios.post("http://178.128.19.31:3002/users/login", data)
+            .then( res => {
+                console.log(res);
+                if ( res.data.statusCode==="OK") {
+                    localStorage.setItem('token', res.data.accessToken);
+                    notify('success');
+                    const user = res.data.id;
+                    dispatch(updateUserId(user));
+                    navigate("/shop");
+                } else {
+                    notify("fail");
+                }
+            })
+            .catch( err => console.log(err));
     }
 
     useEffect(() => {
@@ -90,14 +95,14 @@ const Login = () => {
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
                     autoComplete="off" >
-                    <Form.Item label="Username" name="username"
+                    <Form.Item label="E-mail" name="email"
                         rules={
                             [{
                                 required: true,
-                                message: 'Please input your username!',
+                                message: 'Please input your E-mail!',
                             },]
                         } >
-                        <Input onChange={(e) => setUsername(e.target.value)} />
+                        <Input onChange={(e) => setEmail(e.target.value)} />
                     </Form.Item>
 
                     <Form.Item label="Password"
@@ -131,8 +136,13 @@ const Login = () => {
                             type="primary"
                             htmlType="submit"
                             onClick={() => checkLogin()}
-                        // href='/shop'
                         > Submit
+                        </Button>
+                        <Button className='btn'
+                            type="primary"
+                            htmlType="submit"
+                            onClick={() => navigate("/register")}
+                        > Register
                         </Button>
                     </Form.Item>
                 </Form>

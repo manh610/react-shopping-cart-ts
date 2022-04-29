@@ -113,7 +113,7 @@ const ProductDetail = () => {
 
                                     </Col>
                                     <Col span={1}>
-                                        <Image width={32} height={32} src='/image/cart.png' />
+                                        <Image onClick={() => navigate('/cart')} width={32} height={32} src='/image/cart.png' />
                                     </Col>
                                 </Row>
                             </div>

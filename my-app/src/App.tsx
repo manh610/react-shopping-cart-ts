@@ -7,6 +7,7 @@ import ProductDetail from './components/product';
 import Profile from './components/profile';
 import Login from './components/login'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Register from './components/register';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/cart" element={<Cart/>} />
         <Route path='/product/:productId' element={<ProductDetail/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/register" element={<Register/>} />
       </Routes>
     </Router>
   );
