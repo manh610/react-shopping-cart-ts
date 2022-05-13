@@ -34,7 +34,8 @@ const Register = () => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
     const navigate = useNavigate();
@@ -42,35 +43,30 @@ const Register = () => {
     const register = () => {
         const data = {
             username: username,
-            email: email,
             password: password,
-            passwordConfirmation: confirmPassword,
-            fullName: "string",
-            phone: "string",
-            roleId: "string",
-            active: 0,
-            defaultFarm: "string",
-            additionalProp1 : {}
+            confirmPassword : confirmPassword,
+            firstname: firstname,
+            lastname: lastname
         }
-        axios.post("http://178.128.19.31:3002/users/register", data)
+        axios.post("https://localhost:7019/Users/register", data)
             .then( res => {
-                if ( res.data.statusCode==="OK" ) {
-                    notify("success");
+                if ( res.data.message==="Dang ki thanh cong" ) {
+                    notify("success","");
                     navigate("/")
                 } else {
-                    notify("fail");
+                    notify("fail", res.data.message);
                 }
             })
             .catch( err => console.log(err));
     }
 
-    const notify = (info: string) => {
+    const notify = (info: string, message : string) => {
         switch (info) {
             case 'success':
                 toast.success('Register success');
                 break;
             case 'fail':
-                toast.error('Register fail');
+                toast.error(message);
                 break;
             default:
 
@@ -105,21 +101,23 @@ const Register = () => {
                         } >
                         <Input onChange={(e) => setUsername(e.target.value)} />
                     </Form.Item>
-                    <Form.Item
-                        name="email"
-                        label="E-mail"
-                        rules={[
-                            {
-                                type: 'email',
-                                message: 'The input is not valid E-mail!',
-                            },
-                            {
+                    <Form.Item label="Firstname" name="firstname"
+                        rules={
+                            [{
                                 required: true,
-                                message: 'Please input your E-mail!',
-                            },
-                        ]}
-                    >
-                        <Input onChange={(e) => setEmail(e.target.value)} />
+                                message: 'Please input your firstname!',
+                            },]
+                        } >
+                        <Input onChange={(e) => setFirstname(e.target.value)} />
+                    </Form.Item>
+                    <Form.Item label="Lastname" name="lastname"
+                        rules={
+                            [{
+                                required: true,
+                                message: 'Please input your lastname!',
+                            },]
+                        } >
+                        <Input onChange={(e) => setLastname(e.target.value)} />
                     </Form.Item>
 
                     <Form.Item
@@ -177,6 +175,9 @@ const Register = () => {
                     <Form.Item {...tailFormItemLayout}>
                         <Button className='btn' type="primary" htmlType="submit" onClick={() => register()}>
                             Register
+                        </Button>
+                        <Button className='btn' type="primary" htmlType="submit" onClick={() => navigate("/")}>
+                            Back to Login
                         </Button>
                     </Form.Item>
                 </Form>

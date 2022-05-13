@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const Login = () => {
 
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     const dispatch = useDispatch();
@@ -25,17 +25,14 @@ const Login = () => {
 
     const checkLogin = async () => {
         const data = {
-            email : email,
-            password : password,
-            remember : true,
-            additionalProp1 : {}
+            username : username,
+            password : password
         }
-
-        axios.post("http://178.128.19.31:3002/users/login", data)
+        axios.post("https://localhost:7019/Users/login", data)
             .then( res => {
                 console.log(res);
-                if ( res.data.statusCode==="OK") {
-                    localStorage.setItem('token', res.data.accessToken);
+                if ( res.data.message==="Dang nhap thanh cong") {
+                    localStorage.setItem('token', res.data.data.token);
                     notify('success');
                     const user = res.data.id;
                     dispatch(updateUserId(user));
@@ -95,14 +92,14 @@ const Login = () => {
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
                     autoComplete="off" >
-                    <Form.Item label="E-mail" name="email"
+                    <Form.Item label="Username" name="username"
                         rules={
                             [{
                                 required: true,
                                 message: 'Please input your E-mail!',
                             },]
                         } >
-                        <Input onChange={(e) => setEmail(e.target.value)} />
+                        <Input onChange={(e) => setUsername(e.target.value)} />
                     </Form.Item>
 
                     <Form.Item label="Password"
